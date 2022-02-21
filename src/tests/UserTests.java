@@ -36,7 +36,7 @@ public class UserTests {
 			passed = false;
 		}
 		if (!testFirstName.equals(testUser.getFirstName())) {
-			System.out.println("TC3 Failed: first Name did not match");
+			System.out.println("TC3 Failed: first name did not match");
 			passed = false;
 		}
 		if (!testLastName.equals(testUser.getLastName())) {
