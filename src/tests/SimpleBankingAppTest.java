@@ -53,12 +53,12 @@ public class SimpleBankingAppTest {
 	public static void testWithdrawals() {
 		//Setup phase
 		double balanceBefore = mainApp.getBalance("5495-1234");
-		double withdrawalAmount = 60.39;
+		double withdrawalAmount = -60.39;
 		
 		//Exercise phase
 		mainApp.addTransaction("5495-1234", withdrawalAmount);
 		double balanceAfter = mainApp.getBalance("5495-1234");
-		assert balanceBefore - withdrawalAmount == balanceAfter;
+		assert balanceBefore + withdrawalAmount == balanceAfter;
 		System.out.println("testWithdrawal: TC1 passed.");
 		
 		//Teardown phase
